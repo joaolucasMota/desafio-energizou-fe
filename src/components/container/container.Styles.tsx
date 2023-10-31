@@ -7,4 +7,5 @@ export const ContainerMain = styled.main`
     flex-direction: column;
     padding: 5rem;
     text-align: center;
+    overflow-x: hidden;
 `;
