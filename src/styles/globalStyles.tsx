@@ -35,7 +35,7 @@ export default createGlobalStyle`
     cursor: pointer;
     }
     :root {
-    --PrimaryColor: #6c63ff
+    --PrimaryColor: #6c63ff;
 
     } 
 

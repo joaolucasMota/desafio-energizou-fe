@@ -33,13 +33,23 @@ export const Tabela = styled.table`
     & tr{
         transition: all .3s ease-in;
         font-size: .8rem;
-        &:hover{
-            background-color: #6b63ff55;
-        }
     }
 
-    &td , svg{
-        margin-right: 1rem;
+    & td{
+        & svg{
+        margin: .5rem;
+        }
+
+        & button{
+        border: none;
+        background-color: white;
+        }
+
+        & input{
+            border: 0;
+            width: 2rem;
+        }
+        
     }
 
     & th ,td{
