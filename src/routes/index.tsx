@@ -12,6 +12,8 @@ export default function RoutesApp(){
                 <Route path="/" element={<Main/>}/>
                 <Route path="/home" element={<Home/>}/>
                 <Route path="/insert" element={<Insert/>}/>
+                <Route path="/insert" element={<Insert/>}/>
+                <Route path="/insert/:id" element={<Insert/>}/>
             </Routes>
         </BrowserRouter>
     );

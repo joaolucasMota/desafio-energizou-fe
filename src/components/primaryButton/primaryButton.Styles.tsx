@@ -8,6 +8,7 @@ export const Button = styled.button`
     font-size: 1.5rem;
     color: var(--PrimaryColor);
     transition: all .3s ease-in-out;
+    box-shadow: 2px 2px 15px 2px #07070734;
 
     &:hover{
         background-color: var(--PrimaryColor);
@@ -20,7 +21,7 @@ export const Button = styled.button`
   }
 
   @media (max-width: 500px) {
-    font-size: 1rem;
+    font-size: .8rem;
     padding: 1rem 2rem;
   }
  

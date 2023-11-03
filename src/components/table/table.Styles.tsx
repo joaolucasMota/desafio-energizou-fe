@@ -37,7 +37,7 @@ export const Tabela = styled.table`
 
     & td{
         & svg{
-        margin: .5rem;
+        margin-right: .5rem;
         }
 
         & button{
@@ -54,8 +54,15 @@ export const Tabela = styled.table`
 
     & th ,td{
         border-bottom: 1px solid grey;
-        padding: 1rem;
+        padding: .3rem .7rem;
         white-space: nowrap
     }
+
+    @media (max-width: 700px) {
+        & th, tr, td {
+            font-size: .8rem;
+            padding: .2rem .5rem;
+        }
+  }
  
 `;

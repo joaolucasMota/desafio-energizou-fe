@@ -1,5 +1,5 @@
 export interface Cliente {
-    id: number
+    id?: number
     nomeCliente: string
     senha: string
     razaoSocial: string

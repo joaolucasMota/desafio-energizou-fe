@@ -4,6 +4,7 @@ import { BiEdit } from 'react-icons/bi';
 import { useState } from "react";
 import { Modal } from "../modal/modal";
 import { Cliente } from "../../interfaces/Cliente";
+import { Link } from "react-router-dom";
 
 
 export function Table({ children }: { children: Cliente[] }) {
@@ -40,7 +41,9 @@ export function Table({ children }: { children: Cliente[] }) {
                             <tr key={cliente.id}>
                                 <td>
                                     <button onClick={() => handleOpenModal(cliente)}><CiSearch size={25}/></button>
-                                    <BiEdit size={25}/>
+                                    <Link to={`/insert/${cliente.id}`}>
+                                        <BiEdit size={25}/>
+                                    </Link>
                                 </td>
                                 <td scope='row'><strong>{cliente.id}</strong></td>
                                 <td scope='row'>{cliente.nomeCliente}</td>
@@ -51,7 +54,7 @@ export function Table({ children }: { children: Cliente[] }) {
                                 <td scope='row'>{cliente.cep}</td>
                                 <td scope='row'>{cliente.endereco}</td>
                                 <td scope='row'>{cliente.numero}</td>
-                                <td scope='row'><input type="password" value={cliente.senha}/></td>
+                                <td scope='row'><input type="password" defaultValue={cliente.senha}/></td>
                             </tr>
                         )
                     })}
