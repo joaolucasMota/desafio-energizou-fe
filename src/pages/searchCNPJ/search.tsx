@@ -48,7 +48,6 @@ export default function SeacrhCNP() {
             <Section>
                 <PrimaryTitle>Buscar CNPJ</PrimaryTitle>
                 <h2>Digite o CNPJ que deseja encontar</h2>
-
                 <InputMask
                     mask={"99.999.999/9999-99"}
                     type="text"
@@ -61,7 +60,6 @@ export default function SeacrhCNP() {
                 />
                 {span ? <span className="span">CNPJ não encontrado</span> : ''}
                 <PrimaryButton onClick={() => { loadCNPJ() }}>Bsucar</PrimaryButton>
-
                 <Link to={'/home'}>
                     <PrimaryButton>Voltar</PrimaryButton>
                 </Link>

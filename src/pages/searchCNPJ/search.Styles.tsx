@@ -32,4 +32,10 @@ export const Section = styled.section`
     margin-bottom: 3rem;
   }
 
+  @media (max-width: 768px) {
+    & h2{
+      font-size: 1rem;
+    }
+  }
+
   `;
