@@ -1,21 +1,26 @@
 import { Tabela, ResponsiveTable } from "./table.Styles"
 import { CiSearch } from 'react-icons/ci';
 import { BiEdit } from 'react-icons/bi';
+import { RiDeleteBin5Line } from 'react-icons/ri'
 import { useState } from "react";
 import { Modal } from "../modal/modal";
 import { Cliente } from "../../interfaces/Cliente";
 import { Link } from "react-router-dom";
 
+interface TableProps{
+    children :  Cliente[]
+    handleDelete: (id: number) => void;
+}
 
-export function Table({ children }: { children: Cliente[] }) {
+export function Table({ children, handleDelete }: TableProps) {
 
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedCliente, setSelectedCliente] = useState<Cliente | null>(null);
 
-    const handleOpenModal = (cliente : Cliente) => {
+    const handleOpenModal = (cliente: Cliente) => {
         setSelectedCliente(cliente);
         setIsModalOpen(true);
-      };
+    };
 
     return (
         <ResponsiveTable>
@@ -36,14 +41,21 @@ export function Table({ children }: { children: Cliente[] }) {
                     </tr>
                 </thead>
                 <tbody>
-                    {children.map((cliente) => {
+                    {children.map((cliente : Cliente) => {
                         return (
                             <tr key={cliente.id}>
                                 <td>
-                                    <button onClick={() => handleOpenModal(cliente)}><CiSearch size={25}/></button>
+                                    <button onClick={() => handleOpenModal(cliente)}>
+                                        <CiSearch size={25} />
+                                    </button>
+
                                     <Link to={`/insert/${cliente.id}`}>
-                                        <BiEdit size={25}/>
+                                        <BiEdit size={25} />
                                     </Link>
+
+                                    <button onClick={() => handleDelete(cliente.id as number)}>
+                                        <RiDeleteBin5Line size={25} />
+                                    </button>
                                 </td>
                                 <td scope='row'><strong>{cliente.id}</strong></td>
                                 <td scope='row'>{cliente.nomeCliente}</td>
@@ -54,7 +66,7 @@ export function Table({ children }: { children: Cliente[] }) {
                                 <td scope='row'>{cliente.cep}</td>
                                 <td scope='row'>{cliente.endereco}</td>
                                 <td scope='row'>{cliente.numero}</td>
-                                <td scope='row'><input type="password" defaultValue={cliente.senha}/></td>
+                                <td scope='row'><input type="password" defaultValue={cliente.senha} /></td>
                             </tr>
                         )
                     })}

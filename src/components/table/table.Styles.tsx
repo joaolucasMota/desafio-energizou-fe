@@ -36,9 +36,11 @@ export const Tabela = styled.table`
     }
 
     & td{
-        & svg{
-        margin-right: .5rem;
+        & svg, a{
+        margin-right: .6rem;
         }
+        
+        
 
         & button{
         border: none;
