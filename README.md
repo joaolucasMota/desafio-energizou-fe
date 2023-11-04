@@ -31,6 +31,7 @@ A aplicação permite que o usuário faça a busca por um CNPJ especifico
  <li> Axios
  <li> Vite
  <li> TypeScript
+ <li> API Via Cep 
  <li> Styled Components
 
  Utilizei nessa aplicação também algumas libs do react, como React Input Mask, React Icons e outros.
