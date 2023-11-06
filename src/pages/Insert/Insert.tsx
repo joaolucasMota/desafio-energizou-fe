@@ -4,8 +4,9 @@ import { Section } from "./Insert.Styles"
 import { MyForm } from "../../components/form/form"
 import { Cliente } from "../../interfaces/Cliente"
 import api from "../../services/api"
-import { useNavigate, useParams } from "react-router-dom"
+import { Link, useNavigate, useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
+import { PrimaryButton } from "../../components/primaryButton/primaryButton"
 
 export default function Insert() {
 
@@ -54,6 +55,9 @@ export default function Insert() {
             <Section>
                 <PrimaryTitle>Insira um novo cliente</PrimaryTitle>
                 <MyForm cliente={cliente} formSubmit={handleFormSubmit} />
+                <Link to={'/home'}>
+                    <PrimaryButton>Voltar</PrimaryButton>
+                </Link>
             </Section>
         </Container>
     )
