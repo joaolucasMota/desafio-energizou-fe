@@ -1,27 +1,39 @@
-# React + TypeScript + Vite
+# Aplicação Crud para gerenciamento de clientes
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Essa é o front end da aplicação desenvolvida como parte do desafio da empresa Energizou.
 
-Currently, two official plugins are available:
+O back end da aplicação que é uma API você pode acessar <a href="https://github.com/joaolucasMota/desafio-energizou-be">clicando aqui<a>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Começando
 
-## Expanding the ESLint configuration
+Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Você pode fazer um clone do projeto copiando a URL desta página e executando o comando "git clone <URL DESTA PAGINA>" em uma pasta qualquer do seu computador.
 
-- Configure the top-level `parserOptions` property like this:
+Após isso você deve acessar a pasta do projeto e executar o comando "npm install" (ou o comando instal do seu package mananger), para instalar as dependencias do projeto.
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+Agora com as dependencias do projeto instaladas você pode executar o comando "npm run dev" para inicializar a aplicação.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## 👨🏻‍🔧 Funções da aplicação
+
+Esse sistema basicamnete funciona como gerenciar de uma base de dados de cliente
+
+Nó sistema você pode adiconar cliente e em uma unica tabela visualizar todos e suas informações.
+
+Na tabela você também pode visualizar todas as informações em um modal de um determinado cliente, assim como pode selecionar editar ou excluir os dados de um cliente. 
+
+A aplicação permite que o usuário faça a busca por um CNPJ especifico
+
+<img src="https://i.imgur.com/BbtqpmV.png">
+
+## 👨🏻‍💻 Tecnologias e Libs Utilizadas
+ <li> React
+ <li> Axios
+ <li> Vite
+ <li> TypeScript
+ <li> API Via Cep 
+ <li> Styled Components
+
+ Utilizei nessa aplicação também algumas libs do react, como React Input Mask, React Icons e outros.
+
+A API foi desenvolvida apenas com o Node Js, utilizando o javascript.
